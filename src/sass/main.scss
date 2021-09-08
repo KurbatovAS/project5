@@ -4,4 +4,22 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
+
+// base
+@import './base/normalize';
+@import './base/common';
+@import './base/section';
+@import './base/container';
+@import './utils/variables';
+
+// components
+@import './components/hero-header';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/customer-reviews';
+@import './components/contacts';
+@import './components/footer';
+
 @import './example';
