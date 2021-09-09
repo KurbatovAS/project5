@@ -47,7 +47,6 @@ padding-bottom: 100px;
     @media screen and (min-width: 768px) {
         display: flex;
         flex-basis: calc((100% * 2 - 20px) / 3);
-        margin-right: -20px;
       }
 }
 .product__item{
@@ -80,7 +79,7 @@ padding-bottom: 100px;
         @media screen and (min-width: 768px) {
           width: 220px;
           height: 233px;
-          left: 2%;
+          left: 0;
           }
         @media screen and (min-width: 1200px) {
           width: 335px;
