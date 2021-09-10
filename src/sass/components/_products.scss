@@ -19,8 +19,6 @@
       }
 }
 .section__title{
-    margin-bottom: 140px;
-
     color: $section-title-color;
     font-family: Titan One;
     font-style: normal;
@@ -32,14 +30,20 @@
     text-transform: uppercase;
     @media screen and (min-width: 768px) {
         font-size: 48px;
-        margin-bottom: 150px;
       }
       @media screen and (min-width: 1280px) {
         font-size: 58px;
-        margin-bottom: 260px;
       }
     }
-
+.section__title--products{
+  margin-bottom: 140px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 150px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 260px;
+  }
+}
 .products{
     @media screen and (min-width: 768px) {
         display: flex;
