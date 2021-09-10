@@ -1,4 +1,3 @@
-
 .section__suptitle{
     margin-bottom: 15px;
 
@@ -18,6 +17,8 @@
         font-size: 30px;
       }
 }
+
+
 .section__title{
     color: $section-title-color;
     font-family: Titan One;
@@ -35,6 +36,8 @@
         font-size: 58px;
       }
     }
+
+
 .section__title--products{
   margin-bottom: 140px;
   @media screen and (min-width: 768px) {
@@ -44,6 +47,8 @@
     margin-bottom: 260px;
   }
 }
+
+
 .products{
     @media screen and (min-width: 768px) {
         display: flex;
@@ -54,9 +59,23 @@
       flex-basis: calc((100% * 2 - 30px) / 3);
     }
 }
+
+
+
 .product__item{
   position: relative;
-    border-radius: 24px;
+  max-width: 280px;
+  height: fit-content;
+  border-radius: 24px;
+    @media screen and (min-width: 320px) {
+      max-width: 280px;
+      }
+    @media screen and (min-width: 768px) {
+      max-width: 220px;
+      }
+    @media screen and (min-width: 1280px) {
+      max-width: 330px;
+    }
     &:not(:last-child){
       margin-bottom: 130px;
       @media screen and (min-width: 768px) {
@@ -135,7 +154,11 @@
         }
     }
     }
+
+
+
 .product-card{
+position: relative;
     @media screen and (min-width: 320px) {
       padding: 40px;
       padding-top: 160px;
@@ -149,6 +172,8 @@
       padding-top: 160px;
     }
 }
+
+
 .product-card__title{
     color: $lighten-text-color;
     font-family: Titan One;
@@ -174,7 +199,14 @@
       }
     }
 
+
+
 .product-card__description{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+
     margin-bottom: 30px;
 
     color: $lighten-text-color;
@@ -189,15 +221,96 @@
     @media screen and (min-width: 1280px) {
         font-size: 16px;
       }
+    &::before{
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      content: "";
+      }
+      .product-card.active &{
+        height: auto;
+      }
+      .product-card.active &::before{
+        display: none;
+      }
     }
+
+
+.icecream--description::before{
+  background: linear-gradient(transparent, $product-card-1-color);
+}
+.icecoffe--description::before{
+  background: linear-gradient(transparent, $product-card-2-color);
+}
+.milkshake--description::before{
+  background: linear-gradient(transparent, $product-card-3-color);
+}
+
+
 .product-card__button{
     display: flex;
     margin: 0 auto;
     width: 40px;
     height: 40px;
-
-    background-color: $main-color;
     background-image: url("../images/Products/arrow-right@1x.png");
+    background-color: $main-color;
+
     border: none;
     border-radius: 50%;
+    
+    position: relative;
+    transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    .product-card.active &{
+      transform: rotate(180deg);
     }
+  }
+
+  .content{
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(transparent, #3F3F3F);
+    }
+    .card.active &{
+      height: auto;
+    }
+    .card.active &::before{
+      display: none;
+    }
+  }
+  .content h3{
+    color: azure;
+    font-size: 1.3em;
+  }
+  .content p{
+    color: azure;
+    font-size: 1.3em;
+  }
+.more{
+  position: relative;
+  padding: 10px 15px;
+  background: white;
+  margin-top: 15px;
+  display: inline-block;
+  color: #000;
+  font-size: 14px;
+  .card.active &{
+    background: rgb(231, 59, 231);
+  }
+  &::before{
+    content: "read more";
+  }
+  .card.active &::before{
+    content: "read less";
+    color: white;
+  }
+}
