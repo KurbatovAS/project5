@@ -7,19 +7,26 @@
   background-repeat: no-repeat;
 
   background-position: 117px 97px, 34px 83px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
 
   @media screen and(min-width:768px) {
     height: 400px;
     background-image: url('/images/images-hero/ice-cream_tablet.png'),
       url('/images/images-hero/Ellipse-tablet.png'), url('/images/images-hero/circle-tablet.png'),
       url('/images/images-hero/circle-tablet.png');
-    background-position: 378px 63px, 307px 31px, 718px 94px, 718px 151px;
+    background-position: 378px 63px, 307px 31px, right 94px, right 151px;
+
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 37px;
   }
 
   @media screen and(min-width:1280px) {
     height: 665px;
 
-    background-image: url('/images/images-hero/ice-cream.png'),
+    background-image: url('../images/images-hero/ice-cream.png'),
       url('/images/images-hero/Ellipse.png'), url('/images/images-hero/circle.png'),
       url('/images/images-hero/circle.png');
     background-position: 594px 108px, 475px 52px, 1135px 156px, 1135px 248px;
@@ -28,11 +35,15 @@
 
 .section-hero {
   margin-top: 137px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // @media screen and(max-width:767px) {
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+  // }
 
   @media screen and(min-width:768px) {
     margin-top: 15px;
+    // padding-left: 34px;
+    // padding-right: 34px;
   }
   @media screen and(min-width:1280px) {
     margin-top: 81px;
@@ -55,14 +66,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-top: 6px;
-  @media screen and(max-width:767px) {
-    padding-right: 20px;
-  }
-  @media screen and(min-width:768px) {
-    padding: 37px 34px 0px;
-  }
+
+  // @media screen and(max-width:767px) {
+  //   padding-right: 20px;
+  //   padding-left: 20px;
+  //   padding-top: 6px;
+  // }
+  // @media screen and(min-width:768px) {
+  //   padding: 37px 34px 0px;
+  // }
   @media screen and(min-width:1279px) {
     padding: 40px 115px 0px 46px;
   }
@@ -114,11 +126,11 @@
     right: 109px;
   }
 }
-.hero-points {
-  @media screen and(max-width:767px) {
-    display: none;
-  }
-}
+// .hero-points {
+//   @media screen and(max-width:767px) {
+//     display: none;
+//   }
+// }
 .hero__points--first,
 .hero__points--second {
   display: flex;
@@ -134,6 +146,11 @@
   letter-spacing: 0.04em;
 
   color: $accent-color;
+
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+
   @media screen and(min-width:1280px) {
     font-size: 46px;
     line-height: 1.15;
@@ -265,16 +282,21 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  margin-left: auto;
 
   @media screen and(min-width:1280px) {
     display: none;
   }
 }
-.icon-menu {
-  min-height: 12px;
-  min-width: 20px;
-}
+.menu-toggle__burger {
+  stroke: $accent-color;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  .menu-toggle:hover &,
+  .menu-toggle:focus & {
+    stroke: $lighten-text-color;
+  }
+}
 .menu-container {
   position: absolute;
   top: 0;
@@ -282,14 +304,14 @@
   width: 250px;
   height: 100vh;
   background-color: #e17992;
-  padding-left: 20px;
+  // padding-left: 20px;
   z-index: 2;
 
-  // display: none;
+  display: none;
 
   @media screen and(min-width:768px) {
     width: 254px;
-    padding-left: 24px;
+    // padding-left: 24px;
     display: none;
   }
   @media screen and(min-width:1280px) {
@@ -301,6 +323,8 @@
   border: transparent;
   padding: 10px 60px;
   width: 209px;
+  margin-left: 20px;
+  margin-bottom: 19px;
   background-color: $main-color;
   color: $accent-color;
   font-family: DM Sans;
@@ -317,28 +341,27 @@
     min-width: 184px;
   }
 }
-.menu-toggle {
-  margin-left: auto;
-  cursor: pointer;
+.header__icon,
+.mobile-menu__icon {
+  stroke: $accent-color;
 }
-.menu-toggle__icon {
+.menu-toggle__cross {
+  stroke: $lighten-text-color;
   margin-right: 28px;
   margin-top: 23px;
   margin-bottom: 23px;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .menu-toggle:hover &,
+  .menu-toggle:focus & {
+    stroke: $accent-color;
+  }
 
   @media screen and(min-width:768px) {
     margin-right: 34px;
   }
 }
 
-.menu-toggle__icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  .menu-toggle:hover &,
-  .menu-toggle:focus & {
-    fill: $accent-color;
-  }
-}
 .site-nav {
   @media screen and(min-width:1280px) {
     display: flex;
@@ -349,6 +372,7 @@
     display: block;
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-left: 20px;
     border-top: 1px solid #e18298;
     border-bottom: 1px solid #e18298;
 
@@ -358,6 +382,9 @@
     font-size: 14px;
     line-height: 1.29;
     align-items: center;
+  }
+  @media screen and(min-width:1280px) {
+    padding-left: 24px;
   }
   @media screen and(min-width:1280px) {
     margin-right: 35px;
