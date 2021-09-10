@@ -46,9 +46,13 @@
 }
 
 .advantages__item {
-    outline: 1px solid green;
+  display: inline-flex;
+  outline: 1px solid green;
+  flex-direction: column;
     max-width: 230px;
     width: 100%;
+    
+    
     @media screen  and (min-width: 768px){
       max-width: 180px;
       width: 33.333%;
@@ -58,6 +62,38 @@
       width: 33.333%;
     }
 }
+
+.advantages__item:nth-child(1)::before{
+  content: ""; 
+  width: 33px;
+  height: 50px;
+  margin-bottom: 16px;
+background-image: url('/images/advantages/iconmilk.jpg');
+
+background-size:contain;
+background-repeat: no-repeat;
+}
+
+.advantages__item:nth-child(2)::before{
+  content: ""; 
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+background-image: url('/images/advantages/iconapples2.jpg');
+background-size:contain;
+background-repeat: no-repeat;
+}
+
+.advantages__item:nth-child(3)::before{
+  content: ""; 
+  width: 44px;
+  height: 50px;
+  margin-bottom: 16px;
+background-image: url('/images/advantages/iconheart3.jpg');
+background-size:contain;
+background-repeat: no-repeat;
+}
+
 
 .advantages__item:not(:last-child){
   @media screen  and (min-width: 480px) and (max-width: 767px){
