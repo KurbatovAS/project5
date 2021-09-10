@@ -160,18 +160,20 @@
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    &::after{
+      content: "...";
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: $lighten-text-color;
+    }
     @media screen and (min-width: 1280px) {
         font-size: 30px;
       }
     }
 
-.product-card__span{
-    display: block;
-    margin-bottom: 30px;
-    font-size: 50px;
-    text-align: center;
-    color: $lighten-text-color;
-}
 .product-card__description{
     margin-bottom: 30px;
 
