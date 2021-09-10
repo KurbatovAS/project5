@@ -2,8 +2,8 @@
   position: relative;
   background-color: $hero-bg-color;
 
-  background-image: url('/images/images-hero/ice-cream_mob.png'),
-    url('/images/images-hero/Ellipse-mob.png');
+  background-image: url('../images/images-hero/ice-cream_mob.png'),
+    url('../images/images-hero/Ellipse-mob.png');
   background-repeat: no-repeat;
 
   background-position: 117px 97px, 34px 83px;
@@ -13,9 +13,9 @@
 
   @media screen and(min-width:768px) {
     height: 400px;
-    background-image: url('/images/images-hero/ice-cream_tablet.png'),
-      url('/images/images-hero/Ellipse-tablet.png'), url('/images/images-hero/circle-tablet.png'),
-      url('/images/images-hero/circle-tablet.png');
+    background-image: url('../images/images-hero/ice-cream_tablet.png'),
+      url('../images/images-hero/Ellipse-tablet.png'),
+      url('../images/images-hero/circle-tablet.png'), url('../images/images-hero/circle-tablet.png');
     background-position: 378px 63px, 307px 31px, right 94px, right 151px;
 
     padding-left: 34px;
@@ -27,8 +27,8 @@
     height: 665px;
 
     background-image: url('../images/images-hero/ice-cream.png'),
-      url('/images/images-hero/Ellipse.png'), url('/images/images-hero/circle.png'),
-      url('/images/images-hero/circle.png');
+      url('../images/images-hero/Ellipse.png'), url('../images/images-hero/circle.png'),
+      url('../images/images-hero/circle.png');
     background-position: 594px 108px, 475px 52px, 1135px 156px, 1135px 248px;
   }
 }
