@@ -9,40 +9,7 @@
     max-width: 1280px;
     background: linear-gradient(
         to top,
-        rgba(255, 255, 255, 1) 60%,
-        rgba(255, 245, 246, 1) 40%
+        rgba(255, 255, 255, 1) 56%,
+        rgba(255, 245, 246, 1) 50%
     );
-
-    background-image: url('../images/gallery/gallery-mobile1x.jpg');
-     
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .gallery-backgraund {
-            background-image: url('../images/gallery/gallery-mobile2x.jpg');
-        }
-    }
-    
-    @media screen and (min-width: 768px) {
-        background-image: url("../images/gallery/gallery-tablet1x.jpg");
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url("../images/gallery/gallery-tablet2x.jpg");
-        }
-    }
-    
-    @media screen and (min-width: 1280px) {
-        background-image: url('../images/gallery/gallery-desktop1x.jpg');
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url('../images/gallery/gallery-desktop2x.jpg');
-        }
-    }
 }
