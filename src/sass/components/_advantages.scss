@@ -1,14 +1,14 @@
 .section-advantages {
   background-color: #FFF5F6;
   outline: 1px solid black;
-  padding-top: 0;
+  margin-top: 40px;
   padding-bottom: 145px;
   @media screen and (min-width:768px){
-  
+  margin-top: 66px;
   padding-bottom: 246px;
   }
   @media screen and (min-width:1280px){
-  
+  margin-top: 40px;
   padding-bottom: 310px;
   }
 }
@@ -48,12 +48,14 @@
 .advantages__item {
     outline: 1px solid green;
     max-width: 230px;
-    
+    width: 100%;
     @media screen  and (min-width: 768px){
       max-width: 180px;
+      width: 33.333%;
     }
     @media screen  and (min-width: 1280px){
       max-width: 330px;
+      width: 33.333%;
     }
 }
 
@@ -69,8 +71,11 @@
   }
 }
 
-.qualities__table {
+.advantages__table {
 outline: 1px solid magenta;
+margin-left: 0;
+text-align: left;
+margin-top: 0;
 margin-bottom: 16px;
 font-family: Titan One;
 font-style: normal;
@@ -81,31 +86,20 @@ letter-spacing: 0.04em;
 text-transform: uppercase;
 color: #D41443;
 @media screen and (min-width: 768px) {
-  font-size: 48px;
+font-size: 48px;
 line-height: 1.5;
-  margin-bottom: 13px;
+margin-bottom: 13px;
 }
 @media screen and (min-width: 1280px){
-  margin-bottom: 15px;
-  font-size: 58px;
+margin-bottom: 15px;
+font-size: 58px;
 line-height: 1.14;
 }
 }
 
-.qualities__table::before{
-  content: "";
-  display: inline-block;
-  width: 33px;
-  height: 50px;
-}
 
-.qualities__table::before {
-  margin-bottom: 16px;
-  // background-image: url(".//images/iconmilk.jpg");
-  
-}
 
-.qualities__text {
+.advantages__text {
 outline: 1px solid navy;
 font-family: DM Sans;
 font-style: normal;
