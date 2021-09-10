@@ -7,10 +7,10 @@
 
 // base
 @import './base/normalize';
-@import './base/section';
-@import './base/container';
 @import './utils/variables';
 @import './base/common';
+@import './base/section';
+@import './base/container';
 
 // components
 @import './components/hero-header';
