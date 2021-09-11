@@ -11,9 +11,8 @@
   @media screen and(min-width:768px) {
     height: 400px;
     background-image: url('../images/images-hero/ice-cream_tablet.png'),
-      url('../images/images-hero/Ellipse-tablet.png'),
-      url('../images/images-hero/circle-tablet.png'), url('../images/images-hero/circle-tablet.png');
-    background-position: 378px 63px, 307px 31px, 718px 94px, 718px 151px;
+      url('../images/images-hero/Ellipse-tablet.png');
+    background-position: 378px 63px, 307px 31px;
     background-repeat: no-repeat;
     padding-top: 37px;
   }
@@ -22,13 +21,32 @@
     height: 665px;
     padding-top: 40px;
     background-image: url('../images/images-hero/ice-cream.png'),
-      url('../images/images-hero/Ellipse.png'), url('../images/images-hero/circle.png'),
-      url('../images/images-hero/circle.png');
-    background-position: 594px 108px, 475px 52px, 1150px 156px, 1150px 248px;
+      url('../images/images-hero/Ellipse.png');
+    background-position: 594px 108px, 475px 52px;
   }
 }
 
-.section-hero {
+// @media screen and(min-width:768px) {
+//     height: 400px;
+//     background-image: url('../images/images-hero/ice-cream_tablet.png'),
+//       url('../images/images-hero/Ellipse-tablet.png'),
+//       url('../images/images-hero/circle-tablet.png'), url('../images/images-hero/circle-tablet.png');
+//     background-position: 378px 63px, 307px 31px, 718px 94px, 718px 151px;
+//     background-repeat: no-repeat;
+//     padding-top: 37px;
+//   }
+
+//   @media screen and(min-width:1280px) {
+//     height: 665px;
+//     padding-top: 40px;
+//     background-image: url('../images/images-hero/ice-cream.png'),
+//       url('../images/images-hero/Ellipse.png'), url('../images/images-hero/circle.png'),
+//       url('../images/images-hero/circle.png');
+//     background-position: 594px 108px, 475px 52px, 1150px 156px, 1150px 248px;
+//   }
+// }
+
+.hero {
   margin-top: 137px;
 
   @media screen and(min-width:768px) {
@@ -214,7 +232,7 @@
     display: none;
   }
 }
-.hero__images--first {
+.hero__image--first {
   position: absolute;
   top: 245px;
   left: 34px;
@@ -223,7 +241,7 @@
     left: 77px;
   }
 }
-.hero__images--second {
+.hero__image--second {
   position: absolute;
   bottom: 0;
   right: 34px;
@@ -232,8 +250,8 @@
   }
 }
 
-.hero__points--first,
-.hero__points--second {
+.hero__point--first,
+.hero__point--second {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -258,39 +276,62 @@
   }
 }
 
-.hero__points--first {
+.hero__point--first {
   top: 96px;
   right: 44px;
+  z-index: 2;
   @media screen and(min-width:1280px) {
     top: 160px;
     right: 115px;
   }
 }
-.hero__points--second {
+.hero__point--second {
   top: 152px;
   right: 42px;
+  z-index: 2;
   @media screen and(min-width:1280px) {
     top: 251px;
     right: 115px;
   }
 }
-.hero-points__description {
+.hero-point__description {
   font-size: 8px;
   line-height: 1.25;
-
+  font-family: DM Sans;
   color: $lighten-text-color;
   @media screen and(min-width:1280px) {
     font-size: 14px;
     line-height: 1.29;
   }
 }
-
+.hero__circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 94px;
+  right: 34px;
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+  @media screen and(min-width:1280px) {
+    width: 30px;
+    height: 30px;
+    top: 156px;
+    right: 97px;
+  }
+}
+.hero__circle--second {
+  top: 151px;
+  @media screen and(min-width:1280px) {
+    top: 248px;
+  }
+}
 .menu-toggle {
   display: block;
   border: none;
   outline: none;
   background-color: transparent;
-  cursor: pointer;
+
   margin-left: auto;
   padding: 0;
 
@@ -315,19 +356,21 @@
   height: 100vh;
   background-color: #e17992;
 
-  z-index: 2;
-
-  display: none;
+  z-index: 4;
 
   @media screen and(min-width:768px) {
     width: 254px;
-
-    display: none;
   }
   @media screen and(min-width:1280px) {
     display: none;
   }
+  transform: translateX(100%);
+  transition: transform 250ms linear;
 }
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
 .menu-container__btn {
   border-radius: 22px;
   border: transparent;
