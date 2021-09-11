@@ -9,7 +9,23 @@
     max-width: 1280px;
     background: linear-gradient(
         to top,
-        rgba(255, 255, 255, 1) 56%,
-        rgba(255, 245, 246, 1) 50%
+        rgba(255, 255, 255, 1) 54%,
+        rgba(255, 245, 246, 1) 46%
     );
+    @media screen and (min-width:768px) {
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 1) 55%,
+            rgba(255, 245, 246, 1) 45%
+        );
+    }
+    @media screen and (min-width:1280px) {
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 1) 56%,
+            rgba(255, 245, 246, 1) 44%
+        );
+    }
+        
+    
 }
