@@ -1,9 +1,51 @@
 <header class="page-header">
+  <div class="container">
 
-  <div class="header">
-    <img class="logo" src="./images/images-hero/logo.png" alt="Логотип">
+    <div class="header">
+      <img class="logo" src="./images/images-hero/logo.png" alt="Логотип">
 
-    <nav class="header__navigation">
+      <nav class="header__navigation">
+        <ul class="site-nav">
+          <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+
+      <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-toggle__burger" width="20px" height="12px" aria-label="Переключатель мобильного меню">
+          <use href="./images/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+
+      <button class="header__btn" type="button" data-modal-open>Buy now
+        <svg class="header__icon" width="6px" height="8px">
+          <use href="./images/sprite.svg#icon-biggest"></use>
+        </svg>
+      </button>
+
+    </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__cross" width="14px" height="14px" aria-label="Кнопка закрытия мобильного меню">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+
+
+      <button class="menu-container__btn" type="button" data-modal-open>Buy now
+        <svg class="mobile-menu__icon" width="6px" height="8px">
+          <use href="./images/sprite.svg#icon-biggest"></use>
+        </svg>
+      </button>
+
+
       <ul class="site-nav">
         <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
         <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
@@ -11,104 +53,120 @@
         <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
         <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
       </ul>
-    </nav>
 
+    </div>
 
-    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-      <svg class="menu-toggle__burger" width="20px" height="12px" aria-label="Переключатель мобильного меню">
-        <use href="./images/sprite.svg#icon-burger"></use>
-      </svg>
-    </button>
+    
+      <section class="hero">
+        <h1 class="hero__title">ice cream <br> made with <br> <span
+            class="hero__title hero__title--dedicated">passion</span>
+        </h1>
 
-    <button class="header__btn" type="button">Buy now
-      <svg class="header__icon" width="6px" height="8px">
-        <use href="./images/sprite.svg#icon-biggest"></use>
-      </svg>
-    </button>
+        <div class="hero__btn">
+          <button type="button" class="hero__btn hero__btn--darken">Products</button>
+          <button type="button" class="hero__btn hero__btn--lighten">How it’s made?</button>
+        </div>
 
-  </div>
+        <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et</p>
 
-  <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="hero__read-more" type="button">
+          <img src="./images/images-hero/arrow-right.png" alt="Кнопка читать больше">
+        </button>
 
-    <button class="menu-toggle js-close-menu">
-      <svg class="menu-toggle__cross" width="14px" height="14px" aria-label="Кнопка закрытия мобильного меню">
-        <use href="./images/sprite.svg#icon-close"></use>
-      </svg>
-    </button>
+        <div class="hero__images">
 
+          <picture>
 
+            <source srcset="./images/images-hero/milk-tablet.png 1x, ./images/images-hero/milk-tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
 
-    <button class="menu-container__btn" type="button">Buy now
-      <svg class="mobile-menu__icon" width="6px" height="8px">
-        <use href="./images/sprite.svg#icon-biggest"></use>
-      </svg>
-    </button>
+            <source srcset="./images/images-hero/milk.png 1x, ./images/images-hero/milk@2x.png 2x"
+              media="(min-width:1280px)" />
 
+            <img class="hero__image hero__image--first" src="./images/images-hero/milk-tablet.png" alt="молоко">
 
-    <ul class="site-nav">
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
-    </ul>
+          </picture>
 
-  </div>
+          <picture>
 
-  <div class="container">
-    <section class="hero">
-      <h1 class="hero__title">ice cream <br> made with <br> <span
-          class="hero__title hero__title--dedicated">passion</span>
-      </h1>
+            <source srcset="./images/images-hero/girl-tablet.png 1x, ./images/images-hero/girl-tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
 
-      <div class="hero__btn">
-        <button type="button" class="hero__btn hero__btn--darken">Products</button>
-        <button type="button" class="hero__btn hero__btn--lighten">How it’s made?</button>
-      </div>
+            <source srcset="./images/images-hero/girl.png 1x, ./images/images-hero/girl@2x.png 2x"
+              media="(min-width:1280px)" />
 
-      <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et</p>
+            <img class="hero__image hero__image--second" src="./images/images-hero/girl-tablet.png"
+              alt="девушка с мороженым">
 
-      <button class="hero__read-more" type="button">
-        <img src="./images/images-hero/arrow-right.png" alt="Кнопка читать больше">
-      </button>
+          </picture>
 
-      <div class="hero__images">
+        </div>
 
-        <picture>
+        <div class="hero__points">
+          <p class="hero__point hero__point--first">16 <span class="hero-point__description">cafes</span></p>
+          <img class="hero__circle" src="./images/images-hero/circle.png" alt="кружочек">
+          <p class="hero__point hero__point--second">23 <span class="hero-point__description">food trucks</span></p>
+          <img class="hero__circle hero__circle--second" src="./images/images-hero/circle.png" alt="кружочек">
 
-          <source srcset="./images/images-hero/milk-tablet.png 1x, ./images/images-hero/milk-tablet@2x.png 2x"
-            media="(min-width:768px) and (max-width:1279px)" />
-
-          <source srcset="./images/images-hero/milk.png 1x, ./images/images-hero/milk@2x.png 2x"
-            media="(min-width:1280px)" />
-
-          <img class="hero__image hero__image--first" src="./images/images-hero/milk-tablet.png" alt="молоко">
-
-        </picture>
-
-        <picture>
-
-          <source srcset="./images/images-hero/girl-tablet.png 1x, ./images/images-hero/girl-tablet@2x.png 2x"
-            media="(min-width:768px) and (max-width:1279px)" />
-
-          <source srcset="./images/images-hero/girl.png 1x, ./images/images-hero/girl@2x.png 2x"
-            media="(min-width:1280px)" />
-
-          <img class="hero__image hero__image--second" src="./images/images-hero/girl-tablet.png"
-            alt="девушка с мороженым">
-
-        </picture>
-
-      </div>
-
-      <div class="hero__points">
-        <p class="hero__point hero__point--first">16 <span class="hero-point__description">cafes</span></p>
-        <img class="hero__circle" src="./images/images-hero/circle.png" alt="кружочек">
-        <p class="hero__point hero__point--second">23 <span class="hero-point__description">food trucks</span></p>
-        <img class="hero__circle hero__circle--second" src="./images/images-hero/circle.png" alt="кружочек">
-
-      </div>
-    </section>
+        </div>
+      </section>
   </div>
 </header>
+
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+
+    <form class="form">
+
+      <label class="form__field">
+        <input type="text" class="form__input" name="name" placeholder=" ">
+        <span class="form__label">Имя</span>
+        <svg class="form__icon">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </label>
+
+      <label class="form__field">
+        <input type="tel" class="form__input" name="tel" placeholder=" ">
+        <span class="form__label">Телефон</span>
+        <svg class="form__icon">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </label>
+
+      <label class="form__field">
+        <input type="Email" class="form__input" name="Email" placeholder=" ">
+        <span class="form__label">Почта</span>
+        <svg class="form__icon">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </label>
+
+      <label class="form__field ">
+        <span class="form__item--static">Комментарий</span>
+        <textarea class="form__textarea" name="Comment" rows="8" placeholder="Введите текст"></textarea>
+      </label>
+
+      <label class="form__field checkbox">
+        <input type="checkbox" class="checkbox__input" name="policy">
+        <span class="checkbox__icon"></span>
+        <span class="checkbox__label">Соглашаюсь с рассылкой и принимаю <a class="checkbox__agreement" href="#">Условия
+            договора</a></span>
+      </label>
+
+      <button class="form__submit" type="submit">Отправить</button>
+
+    </form>
+
+
+    <button class="modal__btn" data-modal-close>
+      <svg class="modal__icon">
+        <use href="./images/sprite.svg#icon-close"> </use>
+      </svg>
+    </button>
+  </div>
+</div>
+

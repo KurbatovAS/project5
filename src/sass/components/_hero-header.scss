@@ -2,50 +2,36 @@
   position: relative;
   background-color: $hero-bg-color;
 
-  background-image: url('../images/images-hero/ice-cream_mob.png'),
-    url('../images/images-hero/Ellipse-mob.png');
-  background-repeat: no-repeat;
-  padding-top: 6px;
-  background-position: 117px 97px, 34px 83px;
-
   @media screen and(min-width:768px) {
     height: 400px;
-    background-image: url('../images/images-hero/ice-cream_tablet.png'),
-      url('../images/images-hero/Ellipse-tablet.png');
-    background-position: 378px 63px, 307px 31px;
-    background-repeat: no-repeat;
-    padding-top: 37px;
   }
 
   @media screen and(min-width:1280px) {
     height: 665px;
-    padding-top: 40px;
+  }
+}
+.container {
+  position: relative;
+  padding-top: 6px;
+  overflow: hidden;
+  background-image: url('../images/images-hero/ice-cream_mob.png'),
+    url('../images/images-hero/Ellipse-mob.png');
+  background-repeat: no-repeat;
+
+  background-position: 117px 97px, 34px 83px;
+  @media screen and(min-width:768px) {
+    padding-top: 37px;
+    background-image: url('../images/images-hero/ice-cream_tablet.png'),
+      url('../images/images-hero/Ellipse-tablet.png');
+    background-position: 378px 63px, 307px 31px;
+    background-repeat: no-repeat;
+  }
+  @media screen and(min-width:1280px) {
     background-image: url('../images/images-hero/ice-cream.png'),
       url('../images/images-hero/Ellipse.png');
     background-position: 594px 108px, 475px 52px;
   }
 }
-
-// @media screen and(min-width:768px) {
-//     height: 400px;
-//     background-image: url('../images/images-hero/ice-cream_tablet.png'),
-//       url('../images/images-hero/Ellipse-tablet.png'),
-//       url('../images/images-hero/circle-tablet.png'), url('../images/images-hero/circle-tablet.png');
-//     background-position: 378px 63px, 307px 31px, 718px 94px, 718px 151px;
-//     background-repeat: no-repeat;
-//     padding-top: 37px;
-//   }
-
-//   @media screen and(min-width:1280px) {
-//     height: 665px;
-//     padding-top: 40px;
-//     background-image: url('../images/images-hero/ice-cream.png'),
-//       url('../images/images-hero/Ellipse.png'), url('../images/images-hero/circle.png'),
-//       url('../images/images-hero/circle.png');
-//     background-position: 594px 108px, 475px 52px, 1150px 156px, 1150px 248px;
-//   }
-// }
-
 .hero {
   margin-top: 137px;
 
@@ -72,18 +58,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 20px;
-  margin-left: 20px;
 
-  @media screen and(min-width:768px) {
-    margin-right: 34px;
-    margin-left: 34px;
-  }
+  // @media screen and(min-width:768px) {
+  //   margin-right: 34px;
+  //   margin-left: 34px;
+  // }
 
-  @media screen and(min-width:1280px) {
-    margin-left: 46px;
-    margin-right: 115px;
-  }
+  // @media screen and(min-width:1280px) {
+  //   margin-left: 46px;
+  //   margin-right: 115px;
+  // }
 }
 .header__btn {
   border-radius: 22px;
@@ -108,7 +92,7 @@
     background-color: #ecebeb;
   }
 
-  @media screen and(min-width:768px) {
+  @media screen and(min-width:768px) and(max-width:1279px) {
     margin-left: 30px;
   }
 
@@ -236,17 +220,18 @@
   position: absolute;
   top: 245px;
   left: 34px;
-  @media screen and(min-width:1279px) {
+  @media screen and(min-width:1280px) {
     top: 429px;
     left: 77px;
   }
 }
 .hero__image--second {
   position: absolute;
-  bottom: 0;
+  top: 266px;
   right: 34px;
-  @media screen and(min-width:1279px) {
+  @media screen and(min-width:1280px) {
     right: 109px;
+    top: 433px;
   }
 }
 
@@ -443,7 +428,7 @@
     align-items: center;
   }
 
-  @media screen and(min-width:768px) {
+  @media screen and(min-width:768px) and(max-width:1279px) {
     padding-left: 24px;
   }
   @media screen and(min-width:1280px) {
@@ -477,6 +462,7 @@
   margin-left: 134px;
   width: 18px;
   height: 18px;
+  margin-bottom: 27px;
   @media screen and(max-width:767px) {
     display: none;
   }
@@ -484,5 +470,96 @@
     margin-left: 180px;
     width: 26px;
     height: 26px;
+    margin-bottom: 56px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  z-index: 5;
+  overflow-y: scroll;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  padding: 40px;
+  height: 609px;
+
+  .button__backdrop.is-hidden & {
+    transform: translate(-50%, -50%), scale(0.9);
+  }
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 30px);
+    max-width: 450px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: #212121;
+  margin-bottom: 30px;
+
+  @media screen and(min-width:1200px) {
+    line-height: 1.15;
+  }
+}
+.modal__btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.modal__icon {
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__btn:hover &,
+  .modal__btn:focus & {
+    fill: $accent-color;
   }
 }
