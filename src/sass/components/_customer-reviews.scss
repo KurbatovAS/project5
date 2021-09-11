@@ -1,0 +1,111 @@
+// секция
+
+.section--contacts {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
+}
+
+.container--contacts {
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.contacts__cafe {
+  display: flex;
+  width: 80px;
+  height: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #f0d1a5;
+  border-radius: 4px;
+}
+
+.contacts__cafe--food-truck {
+  width: 130px;
+  height: 16px;
+  background-color: #c2e297;
+}
+
+.contacts__city {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+  padding: 43px 20px;
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts__text {
+  padding-bottom: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.schedule {
+  padding-bottom: 25px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.schedule__item.schedule__item—day {
+  padding-top: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #000000;
+}
+
+.schedule__item.schedule__item—time {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: $section-subtitle-color;
+}
+
+.contact {
+  padding-top: 25px;
+}
+
+.contact__phone,
+.contact__mail {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: $alternate-text-color;
+}
