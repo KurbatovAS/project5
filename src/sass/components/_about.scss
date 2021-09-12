@@ -1,0 +1,30 @@
+.section-about {
+  background: $second-color;
+  position: relative;
+  background-image: url('../images/about/home-pic1_1.png'), url('../images/about/sectionbg1_1.png');
+  background-position: 263px 20px 766px 1px;
+  background-repeat: no-repeat;
+}
+
+.section__title--about {
+  margin-bottom: 35px;
+}
+.description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.6;
+
+  position: relative;
+}
+
+.description__text {
+  color: #907e82;
+}
+.description__text + .description__text {
+  margin-bottom: 35px;
+}
+
+.description__text--color {
+  color: #000000;
+  margin-bottom: 35px;
+}
