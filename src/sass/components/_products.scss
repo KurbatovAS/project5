@@ -21,7 +21,6 @@
         flex-basis: calc((100% * 2 - 20px) / 3);
       }
     @media screen and (min-width: 1280px) {
-      display: flex;
       flex-basis: calc((100% * 2 - 30px) / 3);
     }
 }
