@@ -9,7 +9,7 @@
           <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
           <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
           <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
-          <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
+          <li class="site-nav__item"> <a href="#products" class="site-nav__link">Our products</a></li>
           <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
         </ul>
       </nav>
@@ -76,7 +76,7 @@
 
         <div class="hero__images">
 
-          <picture>
+          <picture class="hero__image hero__image--first">
 
             <source srcset="./images/images-hero/milk-tablet.png 1x, ./images/images-hero/milk-tablet@2x.png 2x"
               media="(min-width:768px) and (max-width:1279px)" />
@@ -84,11 +84,11 @@
             <source srcset="./images/images-hero/milk.png 1x, ./images/images-hero/milk@2x.png 2x"
               media="(min-width:1280px)" />
 
-            <img class="hero__image hero__image--first" src="./images/images-hero/milk-tablet.png" alt="молоко">
+            <img  src="./images/images-hero/milk-tablet.png" alt="молоко">
 
           </picture>
 
-          <picture>
+          <picture class="hero__image hero__image--second">
 
             <source srcset="./images/images-hero/girl-tablet.png 1x, ./images/images-hero/girl-tablet@2x.png 2x"
               media="(min-width:768px) and (max-width:1279px)" />
@@ -96,9 +96,38 @@
             <source srcset="./images/images-hero/girl.png 1x, ./images/images-hero/girl@2x.png 2x"
               media="(min-width:1280px)" />
 
-            <img class="hero__image hero__image--second" src="./images/images-hero/girl-tablet.png"
+            <img  src="./images/images-hero/girl-tablet.png"
               alt="девушка с мороженым">
 
+          </picture>
+
+          <picture class="hero__image hero__image--third">
+          
+            <source srcset="./images/images-hero/Ellipse-mob.png 1x, ./images/images-hero/Ellipse-mob@2x.png 2x"
+              media=" (min-width:320px)" />
+
+            <source srcset="./images/images-hero/Ellipse-tablet.png 1x, ./images/images-hero/Ellipse-tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
+          
+            <source srcset="./images/images-hero/Ellipse.png 1x, ./images/images-hero/Ellipse@2x.png 2x" media="(min-width:1280px)" />
+          
+            <img  src="./images/images-hero/Ellipse-mob.png" alt="Фоновый элипс">
+          
+          </picture>
+
+          <picture class="hero__image hero__image--fourth" >
+          
+            <source srcset="./images/images-hero/ice-cream_mob.png 1x, ./images/images-hero/ice-cream_mob@2x.png 2x"
+              media="(min-width:320px)" />
+          
+            <source srcset="./images/images-hero/ice-cream_tablet.png 1x, ./images/images-hero/ice-cream_tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
+          
+            <source srcset="./images/images-hero/ice-cream.png 1x, ./images/images-hero/ice-cream@2x.png 2x"
+              media="(min-width:1280px)" />
+          
+            <img src="./images/images-hero/ice-cream_mob.png" alt="Мороженое">
+          
           </picture>
 
         </div>
@@ -117,47 +146,62 @@
 
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
-    <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+    <p class="modal__title">Please make your choice</p>
 
     <form class="form">
 
+     
       <label class="form__field">
-        <input type="text" class="form__input" name="name" placeholder=" ">
-        <span class="form__label">Имя</span>
-        <svg class="form__icon">
-          <use href="./images/sprite.svg#icon-close"></use>
-        </svg>
-      </label>
-
-      <label class="form__field">
+        
         <input type="tel" class="form__input" name="tel" placeholder=" ">
-        <span class="form__label">Телефон</span>
-        <svg class="form__icon">
-          <use href="./images/sprite.svg#icon-close"></use>
-        </svg>
+        <span class="form__label">Tel</span>
+        
+      </label>
+      
+      <fieldset class="fieldset">
+        <legend class="fieldset__title">Your favourite programming language</legend>
+      <label class="form__field-checkbox">
+        <legend class="form__checkbox">
+          <p>chocolate</p>
+        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+        </legend>
+        
       </label>
 
-      <label class="form__field">
-        <input type="Email" class="form__input" name="Email" placeholder=" ">
-        <span class="form__label">Почта</span>
-        <svg class="form__icon">
-          <use href="./images/sprite.svg#icon-close"></use>
-        </svg>
+      <label class="form__field-checkbox">
+        <legend class="form__checkbox"> 
+          <p>vanilla</p>
+        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+        </legend>
+       
       </label>
+
+      <label class="form__field-checkbox">
+        
+        <legend class="form__checkbox">
+          <p>fruit</p>
+        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+        </legend>
+        
+      </label>
+
+      </fieldset>
+
+      <label class="form__size" for="size">Size</label>
+      <select class="form__size-item" id="size" name="size">
+        <option value="xs">Extra Small</option>
+        <option value="s">Small</option>
+        <option value="m" selected>Medium</option>
+        <option value="l">Large</option>
+      </select>
 
       <label class="form__field ">
-        <span class="form__item--static">Комментарий</span>
+        <span class="form__item--static">Comment</span>
         <textarea class="form__textarea" name="Comment" rows="8" placeholder="Введите текст"></textarea>
       </label>
 
-      <label class="form__field checkbox">
-        <input type="checkbox" class="checkbox__input" name="policy">
-        <span class="checkbox__icon"></span>
-        <span class="checkbox__label">Соглашаюсь с рассылкой и принимаю <a class="checkbox__agreement" href="#">Условия
-            договора</a></span>
-      </label>
-
-      <button class="form__submit" type="submit">Отправить</button>
+      
+      <button class="form__submit" type="submit">Send</button>
 
     </form>
 
