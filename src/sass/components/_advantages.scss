@@ -1,5 +1,5 @@
 .section--advantages {
-background-color: #FFF5F6;
+background-color: $second-color;
 padding-top: 40px;
 padding-bottom: 97px;
 @media screen and (min-width:768px){
@@ -11,28 +11,8 @@ padding-top: 40px;
 }
 }
 
-.container--advantages {
-@media screen and (min-width: 320px) {
-width: 320px;
-margin: 0 auto;
-padding-left: 20px;
-padding-right: 70px;
-}
-@media screen and (min-width:768px){
-width: 768px;
-padding-top: 0;
-padding-bottom: 0;
-padding-left: 36px;
-padding-right: 76px;
-}
-@media screen and (min-width: 1280px) {
-width: 1280px;
-padding: 0 115px;
-}
-}
-
 .section__title--visually-hidden {
-display: none;
+@extend %visually-hidden;
 }
 
 .advantages {
@@ -107,7 +87,9 @@ background-image: url('../images/advantages/iconheart1@2x.png');
 
 
 .advantages__item:not(:last-child){
-margin-bottom: 38px;    
+@media screen and (max-width: 767px) {
+margin-bottom: 38px;
+}    
 @media screen  and (min-width: 768px){
 margin-right: 60px;
 margin-bottom: 0;
