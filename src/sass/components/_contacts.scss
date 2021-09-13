@@ -1,5 +1,9 @@
 // секция
 
+.section--contacts {
+  background-color: $contacts-bg-coor;
+}
+
 .container--contacts {
   padding-left: 20px;
   padding-right: 20px;
@@ -9,7 +13,7 @@
   @media screen and (min-width: 320px) {
     width: 320px;
     padding: 0 20px;
-    margin: 0 auto;
+    // margin: 0 auto;
 
     .contacts__item:not(:last-child) {
       margin-bottom: 20px;
@@ -73,6 +77,14 @@
       font-size: 14px;
       line-height: 1.5;
       color: $alternate-text-color;
+    }
+
+    .schedule {
+      padding-bottom: 30px;
+      border-top: 1px solid $main-line-color;
+      border-bottom: 1px solid $main-line-color;
+      width: 157px;
+      margin: 0;
     }
 
     .schedule__item.schedule__item—day {
@@ -145,6 +157,14 @@
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
+    padding: 52px 43px;
+
+    .schedule {
+      padding-bottom: 32px;
+      border-top: 1px solid $main-line-color;
+      border-bottom: 1px solid $main-line-color;
+      width: 234px;
+    }
   }
 }
 
@@ -211,6 +231,7 @@
   padding-bottom: 25px;
   border-top: 1px solid $main-line-color;
   border-bottom: 1px solid $main-line-color;
+  width: 180px;
 }
 
 .schedule__item.schedule__item—day {
