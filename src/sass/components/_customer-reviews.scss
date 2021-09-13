@@ -31,6 +31,10 @@
     margin-right: auto;
     padding: 50px 32px;
 
+    .logo-locations {
+      margin-left: 14px;
+    }
+
     .contacts__cafe {
       display: flex;
       width: 73px;
@@ -267,4 +271,12 @@
   background: $main-color;
   border-radius: 22px;
   text-transform: capitalize;
+}
+
+.logo-locations {
+  margin-left: 8px;
+}
+
+.logo-franchise {
+  margin-left: 13px;
 }
