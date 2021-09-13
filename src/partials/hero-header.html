@@ -1,114 +1,224 @@
 <header class="page-header">
+  <div class="container container__page-header">
 
-  <div class="header">
-    <img class="logo" src="./images/images-hero/logo.png" alt="Логотип">
+    <div class="header">
+      <img class="logo" src="./images/images-hero/logo.png" alt="Логотип">
 
-    <nav class="header__navigation">
-      <ul class="site-nav">
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
-      </ul>
-    </nav>
-
-
-    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-      <svg class="menu-toggle__burger" width="20px" height="12px" aria-label="Переключатель мобильного меню">
-        <use href="./images/sprite.svg#icon-burger"></use>
-      </svg>
-    </button>
-
-    <button class="header__btn" type="button">Buy now
-      <svg class="header__icon" width="6px" height="8px">
-        <use href="./images/sprite.svg#icon-biggest"></use>
-      </svg>
-    </button>
-
-  </div>
-
-  <div class="menu-container js-menu-container" id="mobile-menu">
-
-    <button class="menu-toggle js-close-menu">
-      <svg class="menu-toggle__cross" width="14px" height="14px" aria-label="Кнопка закрытия мобильного меню">
-        <use href="./images/sprite.svg#icon-close"></use>
-      </svg>
-    </button>
+      <nav class="header__navigation">
+        <ul class="site-nav">
+          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">Home</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">About us</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to" >How it’s made?</a></li>
+          <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to" >Our products</a></li>
+          <li class="site-nav__item"> <a href="#footer" class="site-nav__link scroll-to">Contact</a></li>
+        </ul>
+      </nav>
 
 
-
-    <button class="menu-container__btn" type="button">Buy now
-      <svg class="mobile-menu__icon" width="6px" height="8px">
-        <use href="./images/sprite.svg#icon-biggest"></use>
-      </svg>
-    </button>
-
-
-    <ul class="site-nav">
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
-      <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
-    </ul>
-
-  </div>
-
-  <div class="container">
-    <section class="hero">
-      <h1 class="hero__title">ice cream <br> made with <br> <span
-          class="hero__title hero__title--dedicated">passion</span>
-      </h1>
-
-      <div class="hero__btn">
-        <button type="button" class="hero__btn hero__btn--darken">Products</button>
-        <button type="button" class="hero__btn hero__btn--lighten">How it’s made?</button>
-      </div>
-
-      <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et</p>
-
-      <button class="hero__read-more" type="button">
-        <img src="./images/images-hero/arrow-right.png" alt="Кнопка читать больше">
+      <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-toggle__burger" width="20px" height="12px" aria-label="Переключатель мобильного меню">
+          <use href="./images/sprite.svg#icon-burger"></use>
+        </svg>
       </button>
 
-      <div class="hero__images">
+      <button class="header__btn" type="button" data-modal-open>Buy now
+        <svg class="header__icon" width="6px" height="8px">
+          <use href="./images/sprite.svg#icon-biggest"></use>
+        </svg>
+      </button>
 
-        <picture>
+    </div>
 
-          <source srcset="./images/images-hero/milk-tablet.png 1x, ./images/images-hero/milk-tablet@2x.png 2x"
-            media="(min-width:768px) and (max-width:1279px)" />
+    <div class="menu-container js-menu-container" id="mobile-menu">
 
-          <source srcset="./images/images-hero/milk.png 1x, ./images/images-hero/milk@2x.png 2x"
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__cross" width="14px" height="14px" aria-label="Кнопка закрытия мобильного меню">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+
+
+      <button class="menu-container__btn" type="button" data-modal-menuOpen>Buy now
+        <svg class="mobile-menu__icon" width="6px" height="8px">
+          <use href="./images/sprite.svg#icon-biggest"></use>
+        </svg>
+      </button>
+
+
+      <ul class="site-nav">
+        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">Home</a></li>
+        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">About us</a></li>
+        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">How it’s made?</a></li>
+        <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to">Our products</a></li>
+        <li class="site-nav__item"> <a href="#footer" class="site-nav__link scroll-to">Contact</a></li>
+      </ul>
+
+    </div>
+
+    
+      <section class="hero">
+        <h1 class="hero__title">ice cream <br> made with <br> <span
+            class="hero__title hero__title--dedicated">passion</span>
+        </h1>
+
+        <div class="hero__btn">
+          <button type="button" class="hero__btn hero__btn--darken"> <a class="hero__btn-link scroll-to" href="#products">Products</a></button>
+          <button type="button" class="hero__btn hero__btn--lighten"><a class="hero__btn-link hero__btn-link--second scroll-to" href="#">How it’s made?</a></button>
+        </div>
+        
+        <div class="hero__read">
+          <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et <span id="dots">...</span><span id="more">Lorem ipsum dolor sit amet, consectetur adipiscing</span></p>
+
+          <button class="hero__read-more" onclick="myFunction()" id="myBtn">
+            <svg class="hero__icon" width="7px" height="7px">
+              <use href="./images/sprite.svg#icon-rightarrow" ></use>
+            </svg>
+           
+          </button>
+          
+        </div>
+
+        <div class="hero__images">
+
+          <picture class="hero__image hero__image--first">
+
+            <source srcset="./images/images-hero/milk-tablet.png 1x, ./images/images-hero/milk-tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
+
+            <source srcset="./images/images-hero/milk.png 1x, ./images/images-hero/milk@2x.png 2x"
+              media="(min-width:1280px)" />
+
+            <img  src="./images/images-hero/milk-tablet.png" alt="молоко">
+
+          </picture>
+
+          <picture class="hero__image hero__image--second">
+
+            <source srcset="./images/images-hero/girl-tablet.png 1x, ./images/images-hero/girl-tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
+
+            <source srcset="./images/images-hero/girl.png 1x, ./images/images-hero/girl@2x.png 2x"
+              media="(min-width:1280px)" />
+
+            <img  src="./images/images-hero/girl-tablet.png"
+              alt="девушка с мороженым">
+
+          </picture>
+
+          <picture class="hero__image hero__image--third">
+          
+            <source srcset="./images/images-hero/Ellipse-mob.png 1x, ./images/images-hero/Ellipse-mob@2x.png 2x"
+              media="(min-width:320px) and (max-width:767px)"  />
+
+            <source srcset="./images/images-hero/Ellipse-tablet.png 1x, ./images/images-hero/Ellipse-tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
+          
+            <source srcset="./images/images-hero/Ellipse.png 1x, ./images/images-hero/Ellipse@2x.png 2x" 
             media="(min-width:1280px)" />
+          
+            <img  src="./images/images-hero/Ellipse-mob.png" 
+            alt="Фоновый элипс">
+          
+          </picture>
 
-          <img class="hero__image hero__image--first" src="./images/images-hero/milk-tablet.png" alt="молоко">
+          <picture class="hero__image hero__image--fourth" >
+          
+            <source srcset="./images/images-hero/ice-cream_mob.png 1x, ./images/images-hero/ice-cream_mob@2x.png 2x"
+              media="(min-width:320px) and (max-width:767px)" />
+          
+            <source srcset="./images/images-hero/ice-cream_tablet.png 1x, ./images/images-hero/ice-cream_tablet@2x.png 2x"
+              media="(min-width:768px) and (max-width:1279px)" />
+          
+            <source srcset="./images/images-hero/ice-cream.png 1x, ./images/images-hero/ice-cream@2x.png 2x"
+              media="(min-width:1280px)" />
+          
+            <img src="./images/images-hero/ice-cream_mob.png" alt="Мороженое">
+          
+          </picture>
 
-        </picture>
+        </div>
 
-        <picture>
+        <div class="hero__points">
+          <p class="hero__point hero__point--first">16 <span class="hero-point__description">cafes</span></p>
+          <img class="hero__circle" src="./images/images-hero/circle.png" alt="кружочек">
+          <p class="hero__point hero__point--second">23 <span class="hero-point__description">food trucks</span></p>
+          <img class="hero__circle hero__circle--second" src="./images/images-hero/circle.png" alt="кружочек">
 
-          <source srcset="./images/images-hero/girl-tablet.png 1x, ./images/images-hero/girl-tablet@2x.png 2x"
-            media="(min-width:768px) and (max-width:1279px)" />
-
-          <source srcset="./images/images-hero/girl.png 1x, ./images/images-hero/girl@2x.png 2x"
-            media="(min-width:1280px)" />
-
-          <img class="hero__image hero__image--second" src="./images/images-hero/girl-tablet.png"
-            alt="девушка с мороженым">
-
-        </picture>
-
-      </div>
-
-      <div class="hero__points">
-        <p class="hero__point hero__point--first">16 <span class="hero-point__description">cafes</span></p>
-        <img class="hero__circle" src="./images/images-hero/circle.png" alt="кружочек">
-        <p class="hero__point hero__point--second">23 <span class="hero-point__description">food trucks</span></p>
-        <img class="hero__circle hero__circle--second" src="./images/images-hero/circle.png" alt="кружочек">
-
-      </div>
-    </section>
+        </div>
+      </section>
   </div>
 </header>
+
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <p class="modal__title">Please make your choice</p>
+
+    <form class="form">
+
+     
+      <label class="form__field">
+        
+        <input type="tel" class="form__input" name="tel" placeholder=" ">
+        <span class="form__label">Tel</span>
+        
+      </label>
+      
+      <fieldset class="fieldset">
+        <legend class="fieldset__title">Your favourite programming language</legend>
+      <label class="form__field-checkbox">
+        <legend class="form__checkbox">
+          <p>chocolate</p>
+        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+        </legend>
+        
+      </label>
+
+      <label class="form__field-checkbox">
+        <legend class="form__checkbox"> 
+          <p>vanilla</p>
+        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+        </legend>
+       
+      </label>
+
+      <label class="form__field-checkbox">
+        
+        <legend class="form__checkbox">
+          <p>fruit</p>
+        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+        </legend>
+        
+      </label>
+
+      </fieldset>
+
+      <label class="form__size" for="size">Size</label>
+      <select class="form__size-item" id="size" name="size">
+        <option value="xs">Extra Small</option>
+        <option value="s">Small</option>
+        <option value="m" selected>Medium</option>
+        <option value="l">Large</option>
+      </select>
+
+      <label class="form__field ">
+        <span class="form__item--static">Comment</span>
+        <textarea class="form__textarea" name="Comment" rows="8" placeholder="Введите текст"></textarea>
+      </label>
+
+      
+      <button class="form__submit" type="submit">Send</button>
+
+    </form>
+
+
+    <button class="modal__btn" data-modal-close>
+      <svg class="modal__icon">
+        <use href="./images/sprite.svg#icon-close"> </use>
+      </svg>
+    </button>
+  </div>
+</div>
+
