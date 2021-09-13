@@ -8,7 +8,7 @@
   }
 }
 
-.section__label{
+.section__label {
   margin-bottom: 15px;
 
   color: $section-label-color;
@@ -16,32 +16,35 @@
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.16;
+  line-height: 1.17;
 
   text-align: center;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
-      font-size: 26px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 30px;
-    }
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 
-.section__title{
+.section__title {
   color: $section-title-color;
   font-family: Titan One;
   font-style: normal;
   font-weight: 400;
   font-size: 34px;
-  line-height: 1.5;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
-      font-size: 48px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 58px;
-    }
+    font-size: 48px;
   }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
