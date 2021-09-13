@@ -1,17 +1,142 @@
 // секция
 
-.section--contacts {
+.container--contacts {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .contacts__item:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
   @media screen and (min-width: 480px) {
     width: 480px;
+    .contacts__item:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 32px;
+
+    .contacts__cafe {
+      display: flex;
+      width: 73px;
+      height: 28px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.86;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      align-items: center;
+      justify-content: center;
+      color: $main-color;
+      background-color: $cafe-bg-color;
+      border-radius: 4px;
+    }
+
+    .contacts__cafe--food-truck {
+      width: 138px;
+      height: 28px;
+      background-color: $truck-bg-color;
+    }
+
+    .contacts__city {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.86;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      text-transform: capitalize;
+      color: $main-text-color;
+    }
+
+    .contacts__text {
+      padding-bottom: 25px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $alternate-text-color;
+    }
+
+    .schedule__item.schedule__item—day {
+      padding-top: 25px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.86;
+      color: $main-text-color;
+    }
+
+    .schedule__item.schedule__item—time {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.86;
+      color: $section-subtitle-color;
+    }
+
+    .contact__phone,
+    .contact__mail {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.86;
+      color: $alternate-text-color;
+    }
+
+    .button {
+      width: 192px;
+      height: 44px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.3;
+      color: $main-color;
+      background: $accent-color;
+      border-radius: 22px;
+      border: none;
+      text-transform: capitalize;
+    }
+
+    .button__franchise {
+      width: 192px;
+      height: 44px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.3;
+      margin-top: 10px;
+      color: $accent-color;
+      background: $main-color;
+      border-radius: 22px;
+      text-transform: capitalize;
+    }
+
+    .button {
+      margin-right: 15px;
+    }
+
+    .contacts {
+      display: flex;
+      margin: -15px;
+    }
+
+    .contacts__item {
+      flex-basis: calc((100% - 5 * 15px) / 3);
+      margin: 15px;
+    }
+
+    .buttons {
+      margin-top: 81px;
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -19,8 +144,7 @@
   }
 }
 
-.container--contacts {
-}
+//скрытый заголовок
 
 .visually-hidden {
   position: absolute;
@@ -29,6 +153,8 @@
   height: 1px;
   margin: -1px;
 }
+
+// отзывы
 
 .contacts__cafe {
   display: flex;
@@ -41,15 +167,15 @@
   margin-bottom: 25px;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  background-color: #f0d1a5;
+  color: $main-color;
+  background-color: $cafe-bg-color;
   border-radius: 4px;
 }
 
 .contacts__cafe--food-truck {
   width: 130px;
   height: 16px;
-  background-color: #c2e297;
+  background-color: $truck-bg-color;
 }
 
 .contacts__city {
@@ -59,13 +185,12 @@
   margin-bottom: 10px;
   letter-spacing: 0.04em;
   text-transform: capitalize;
-  color: #000000;
+  color: $main-text-color;
 }
 
 .contacts__item {
-  margin-bottom: 20px;
   padding: 43px 20px;
-  background: #ffffff;
+  background: $main-color;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
@@ -75,12 +200,13 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
+  color: $alternate-text-color;
 }
 
 .schedule {
   padding-bottom: 25px;
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid $main-line-color;
+  border-bottom: 1px solid $main-line-color;
 }
 
 .schedule__item.schedule__item—day {
@@ -88,7 +214,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
-  color: #000000;
+  color: $main-text-color;
 }
 
 .schedule__item.schedule__item—time {
@@ -108,4 +234,37 @@
   font-size: 12px;
   line-height: 1.86;
   color: $alternate-text-color;
+}
+
+// кнопки
+
+.buttons {
+  text-align: center;
+  margin-top: 54px;
+}
+
+.button {
+  width: 162px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $main-color;
+  background: $accent-color;
+  border-radius: 22px;
+  border: none;
+  text-transform: capitalize;
+}
+
+.button__franchise {
+  width: 162px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  margin-top: 10px;
+  color: $accent-color;
+  background: $main-color;
+  border-radius: 22px;
+  text-transform: capitalize;
 }
