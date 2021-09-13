@@ -1,0 +1,122 @@
+.section--footer {
+  padding-top: 50px;
+  padding-bottom: 25px;
+
+  background-color: $second-color;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 65px;
+    padding-bottom: 10px;
+  }
+}
+
+.container--footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 91px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 97px;
+  }
+}
+
+.section__label--footer {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 340px;
+    text-align: left;
+  }
+}
+
+.section__title--footer {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 340px;
+    text-align: left;
+  }
+}
+
+.footer {
+  @media screen and (max-width: 767px) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-bottom: 46px;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 29px;
+}
+
+.footer__link {
+  &:hover,
+  &:focus {
+    fill: $section-label-color;
+  }
+}
+
+.footer__icon {
+  fill: $social-bg-color;
+}
+
+.footer__contact-text {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: right;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+.footer__contact-phone {
+  display: inline;
+
+  color: $section-title-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $section-label-color;
+  }
+}
+
+.copyright {
+  padding-top: 22px;
+
+  border-top: 1px solid #e1e1e1;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 29px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 9px;
+  }
+}
+
+.copyright__text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  color: $alternate-text-color;
+
+  @media screen and (min-width: 768px) {
+    line-height: 1.86;
+  }
+}
