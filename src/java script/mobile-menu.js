@@ -1,7 +1,9 @@
+
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
+const menuLink = document.querySelectorAll('.site-nav__link');
 
   const toggleMenu = () => {
     const isMenuOpen =
@@ -14,6 +16,12 @@
       : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
   };
+
+menuLink.forEach(function (link) {
+    link.addEventListener('click', () => {
+      toggleMenu();
+    });
+  });
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);

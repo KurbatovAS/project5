@@ -6,11 +6,11 @@
 
       <nav class="header__navigation">
         <ul class="site-nav">
-          <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
-          <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
-          <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
-          <li class="site-nav__item"> <a href="#products" class="site-nav__link">Our products</a></li>
-          <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">Home</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">About us</a></li>
+          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to" >How it’s made?</a></li>
+          <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to" >Our products</a></li>
+          <li class="site-nav__item"> <a href="#footer" class="site-nav__link scroll-to">Contact</a></li>
         </ul>
       </nav>
 
@@ -39,7 +39,7 @@
 
 
 
-      <button class="menu-container__btn" type="button" data-modal-open>Buy now
+      <button class="menu-container__btn" type="button" data-modal-menuOpen>Buy now
         <svg class="mobile-menu__icon" width="6px" height="8px">
           <use href="./images/sprite.svg#icon-biggest"></use>
         </svg>
@@ -47,11 +47,11 @@
 
 
       <ul class="site-nav">
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">Home</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">About us</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">How it’s made?</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">Our products</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link">Contact</a></li>
+        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">Home</a></li>
+        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">About us</a></li>
+        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">How it’s made?</a></li>
+        <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to">Our products</a></li>
+        <li class="site-nav__item"> <a href="#footer" class="site-nav__link scroll-to">Contact</a></li>
       </ul>
 
     </div>
@@ -63,16 +63,22 @@
         </h1>
 
         <div class="hero__btn">
-          <button type="button" class="hero__btn hero__btn--darken">Products</button>
-          <button type="button" class="hero__btn hero__btn--lighten">How it’s made?</button>
+          <button type="button" class="hero__btn hero__btn--darken"> <a class="hero__btn-link scroll-to" href="#products">Products</a></button>
+          <button type="button" class="hero__btn hero__btn--lighten"><a class="hero__btn-link hero__btn-link--second scroll-to" href="#">How it’s made?</a></button>
         </div>
+        
+        <div class="hero__read">
+          <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et <span id="dots">...</span><span id="more">Lorem ipsum dolor sit amet, consectetur adipiscing</span></p>
 
-        <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et</p>
-
-        <button class="hero__read-more" type="button">
-          <img src="./images/images-hero/arrow-right.png" alt="Кнопка читать больше">
-        </button>
+          <button class="hero__read-more" onclick="myFunction()" id="myBtn">
+            <svg class="hero__icon" width="7px" height="7px">
+              <use href="./images/sprite.svg#icon-rightarrow" ></use>
+            </svg>
+           
+          </button>
+          
+        </div>
 
         <div class="hero__images">
 
@@ -104,21 +110,23 @@
           <picture class="hero__image hero__image--third">
           
             <source srcset="./images/images-hero/Ellipse-mob.png 1x, ./images/images-hero/Ellipse-mob@2x.png 2x"
-              media=" (min-width:320px)" />
+              media="(min-width:320px) and (max-width:767px)"  />
 
             <source srcset="./images/images-hero/Ellipse-tablet.png 1x, ./images/images-hero/Ellipse-tablet@2x.png 2x"
               media="(min-width:768px) and (max-width:1279px)" />
           
-            <source srcset="./images/images-hero/Ellipse.png 1x, ./images/images-hero/Ellipse@2x.png 2x" media="(min-width:1280px)" />
+            <source srcset="./images/images-hero/Ellipse.png 1x, ./images/images-hero/Ellipse@2x.png 2x" 
+            media="(min-width:1280px)" />
           
-            <img  src="./images/images-hero/Ellipse-mob.png" alt="Фоновый элипс">
+            <img  src="./images/images-hero/Ellipse-mob.png" 
+            alt="Фоновый элипс">
           
           </picture>
 
           <picture class="hero__image hero__image--fourth" >
           
             <source srcset="./images/images-hero/ice-cream_mob.png 1x, ./images/images-hero/ice-cream_mob@2x.png 2x"
-              media="(min-width:320px)" />
+              media="(min-width:320px) and (max-width:767px)" />
           
             <source srcset="./images/images-hero/ice-cream_tablet.png 1x, ./images/images-hero/ice-cream_tablet@2x.png 2x"
               media="(min-width:768px) and (max-width:1279px)" />

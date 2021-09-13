@@ -1,7 +1,7 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
+    openModalBtn: document.querySelector('[data-modal-menuOpen]'),
+    closeModalBtn: document.querySelector('[data-modal-сlose]'),
     modal: document.querySelector('[data-modal]'),
   };
  
@@ -13,6 +13,3 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
-
-
-
