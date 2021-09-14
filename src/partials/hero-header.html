@@ -6,11 +6,11 @@
 
       <nav class="header__navigation">
         <ul class="site-nav">
-          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">Home</a></li>
-          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">About us</a></li>
-          <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to" >How it’s made?</a></li>
-          <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to" >Our products</a></li>
-          <li class="site-nav__item"> <a href="#footer" class="site-nav__link scroll-to">Contact</a></li>
+          <li class="site-nav__item"> <a href="./index.html" class="site-nav__link scroll-to">Home</a></li>
+          <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to">Our products</a></li>
+          <li class="site-nav__item"> <a href="#about" class="site-nav__link scroll-to" >How it’s made?</a></li>
+          <li class="site-nav__item"> <a href="#advantages" class="site-nav__link scroll-to">About us</a></li>
+          <li class="site-nav__item"> <a href="#сontacts" class="site-nav__link scroll-to">Contact</a></li>
         </ul>
       </nav>
 
@@ -47,11 +47,11 @@
 
 
       <ul class="site-nav">
-        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">Home</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">About us</a></li>
-        <li class="site-nav__item"> <a href="#" class="site-nav__link scroll-to">How it’s made?</a></li>
+        <li class="site-nav__item"> <a href="./index.html" class="site-nav__link scroll-to">Home</a></li>
         <li class="site-nav__item"> <a href="#products" class="site-nav__link scroll-to">Our products</a></li>
-        <li class="site-nav__item"> <a href="#footer" class="site-nav__link scroll-to">Contact</a></li>
+        <li class="site-nav__item"> <a href="#about" class="site-nav__link scroll-to">How it’s made?</a></li>
+        <li class="site-nav__item"> <a href="#advantages" class="site-nav__link scroll-to">About us</a></li>
+        <li class="site-nav__item"> <a href="#сontacts" class="site-nav__link scroll-to">Contact</a></li>
       </ul>
 
     </div>
@@ -64,23 +64,20 @@
 
         <div class="hero__btn">
           <button type="button" class="hero__btn hero__btn--darken"> <a class="hero__btn-link scroll-to" href="#products">Products</a></button>
-          <button type="button" class="hero__btn hero__btn--lighten"><a class="hero__btn-link hero__btn-link--second scroll-to" href="#">How it’s made?</a></button>
+          <button type="button" class="hero__btn hero__btn--lighten"><a class="hero__btn-link hero__btn-link--second scroll-to" href="#about">How it’s made?</a></button>
         </div>
         
         <div class="hero__read">
           <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et <span id="dots">...</span><span id="more">Lorem ipsum dolor sit amet, consectetur adipiscing</span></p>
-
-          <button class="hero__read-more" onclick="myFunction()" id="myBtn">
-            <svg class="hero__icon" width="7px" height="7px">
-              <use href="./images/sprite.svg#icon-rightarrow" ></use>
-            </svg>
-           
+          incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+            adipiscing</p>
+        
+          <button type="button" class="hero__read-more"  id="myBtn">                
           </button>
-          
+
         </div>
 
-        <div class="hero__images">
+        <div>
 
           <picture class="hero__image hero__image--first">
 
@@ -158,56 +155,48 @@
 
     <form class="form">
 
-     
-      <label class="form__field">
-        
-        <input type="tel" class="form__input" name="tel" placeholder=" ">
-        <span class="form__label">Tel</span>
-        
-      </label>
+        <label class="form__field">
+          <input type="tel" class="form__input" name="tel" placeholder=" " maxlength="10" minlength="10">
+          <span class="form__label">Tel</span>
+        </label>
       
       <fieldset class="fieldset">
-        <legend class="fieldset__title">Your favourite programming language</legend>
+        <legend class="fieldset__title">Your favourite ice-cream</legend>
+          <label class="form__field-checkbox">
+            <legend class="form__checkbox">
+              <p>chocolate</p>
+              <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+            </legend>
+          </label>
+
       <label class="form__field-checkbox">
-        <legend class="form__checkbox">
-          <p>chocolate</p>
-        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+          <legend class="form__checkbox"> 
+            <p>vanilla</p>
+          <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
         </legend>
-        
       </label>
 
       <label class="form__field-checkbox">
-        <legend class="form__checkbox"> 
-          <p>vanilla</p>
-        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
-        </legend>
-       
-      </label>
-
-      <label class="form__field-checkbox">
-        
         <legend class="form__checkbox">
           <p>fruit</p>
-        <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
+          <input type="checkbox" class="form__checkbox-input" name="ice-cream" placeholder=" ">
         </legend>
-        
       </label>
 
       </fieldset>
 
-      <label class="form__size" for="size">Size</label>
-      <select class="form__size-item" id="size" name="size">
-        <option value="xs">Extra Small</option>
-        <option value="s">Small</option>
-        <option value="m" selected>Medium</option>
-        <option value="l">Large</option>
-      </select>
+        <label class="form__size" for="size">Size</label>
+        <select class="form__size-item" id="size" name="size">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m" selected>Medium</option>
+          <option value="l">Large</option>
+        </select>
 
-      <label class="form__field ">
-        <span class="form__item--static">Comment</span>
-        <textarea class="form__textarea" name="Comment" rows="8" placeholder="Введите текст"></textarea>
-      </label>
-
+        <label class="form__field ">
+          <span class="form__item--static">Comment</span>
+          <textarea class="form__textarea" name="Comment" rows="8" placeholder="Введите текст"></textarea>
+        </label>
       
       <button class="form__submit" type="submit">Send</button>
 
@@ -219,6 +208,7 @@
         <use href="./images/sprite.svg#icon-close"> </use>
       </svg>
     </button>
+
   </div>
 </div>
 
