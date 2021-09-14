@@ -1,30 +1,183 @@
+
+.section-bg {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 500px;
+}
+
 .section-about {
-  background: $second-color;
   position: relative;
-  background-image: url('../images/about/home-pic1_1.png'), url('../images/about/sectionbg1_1.png');
-  background-position: 263px 20px 766px 1px;
+  background: $second-color;
+
   background-repeat: no-repeat;
+  z-index: 2;
+}
+.section-bg {
+  display: none;
+  width: 100%;
+
+  @media screen and(min-width:320px) {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 10%;
+    height: 150px;
+  }
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+  @media screen and(min-width:1280px) {
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+    height: 500px;
+  }
+}
+.about {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.about__thumb {
+  height: 280px;
+  max-width: 480px;
+
+  background-image: url('../images/about/caw-mob1@1x.png');
+  //background-size: 340px 340px;
+  background-size: 280px 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/about/caw-mob1@2x.png');
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 340px;
+    height: 340px;
+    background-image: url('../images/about/caw-tablet2@1x.png');
+    background-size: 340px 340px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/about/caw-tablet2@2x.png');
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    height: 340px;
+    //width: 516px;
+    //height: 516px;
+    background-image: url('../images/about/caw-desktop3@1x.png');
+    background-size: 340px 340px;
+    //background-size: 516px 516px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/about/caw-desktop3@2x.png');
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 516px;
+    width: 516px;
+    height: 516px;
+    background-size: 516px 516px;
+  }
 }
 
 .section__title--about {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+
+  @media screen and(min-width:768px) {
+    margin-bottom: 50px;
+  }
+  @media screen and(min-width:1280px) {
+    margin-bottom: 60px;
+  }
 }
+
 .description {
+  line-height: 1.6;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.6;
 
-  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+
+  @media screen and(min-width:768px) {
+    width: 340px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  @media screen and(min-width:1280px) {
+    width: 463px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.8;
+  }
 }
 
 .description__text {
-  color: #907e82;
-}
-.description__text + .description__text {
+  color: $alternate-text-color;
   margin-bottom: 35px;
+
+  &:last-of-type {
+    margin-bottom: 15px;
+  }
+  @media screen and(min-width:768px) {
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and(min-width:1280px) {
+    font-size: 14px;
+    line-height: 1.9;
+    &:last-of-type {
+      margin-bottom: 55px;
+    }
+  }
 }
 
 .description__text--color {
-  color: #000000;
+  color: $main-text-color;
   margin-bottom: 35px;
+}
+.description__button {
+  min-width: 175px;
+  padding: 13px 37px;
+  background: $main-color;
+  border-radius: 20px;
+  border: none;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #d41443;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.description__icon {
+  stroke: $accent-color;
+  margin-left: 14px;
+}
+#more {
+  display: none;
 }
