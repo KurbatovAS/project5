@@ -15,14 +15,16 @@
 }
 
 .container--footer {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 45px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-
-    padding-bottom: 91px;
+    margin-bottom: 91px;
   }
   @media screen and (min-width: 1280px) {
-    padding-bottom: 97px;
+    margin-bottom: 97px;
   }
 }
 
@@ -42,8 +44,7 @@
 
 .footer {
   @media screen and (max-width: 767px) {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    margin-top: 45px;
   }
 }
 
