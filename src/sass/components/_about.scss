@@ -159,7 +159,25 @@
       margin-bottom: 55px;
     }
   }
-}
+  &--readmore{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    font: DM Sans;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.9;
+
+letter-spacing: 0.04em;
+     @media screen and (min-width: 1280px) {
+         font-size: 16px;
+       }
+        .description.active &{
+          height: auto;
+        }
+       }
+      }
 
 .description__text--color {
   color: $main-text-color;
@@ -193,6 +211,4 @@
   stroke: $accent-color;
   margin-left: 14px;
 }
-#more {
-  display: none;
-}
+
