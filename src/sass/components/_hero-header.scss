@@ -1,12 +1,13 @@
 .page-header {
   position: relative;
   background-color: $hero-bg-color;
+  overflow: hidden;
 
   z-index: 0;
 }
 .container__page-header {
-  position: relative;
   padding-top: 6px;
+  position: relative;
   overflow: hidden;
 
   @media screen and(min-width:768px) {
