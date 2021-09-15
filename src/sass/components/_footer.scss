@@ -1,123 +1,341 @@
-.section--footer {
-  padding-top: 50px;
-  padding-bottom: 25px;
-
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+.section--contacts {
   background-color: $second-color;
+}
+
+.section--contacts {
+  padding-top: 86px;
+  padding-bottom: 65px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 110px;
+    padding-bottom: 100px;
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 65px;
-    padding-bottom: 10px;
+    padding-top: 130px;
+    padding-bottom: 100px;
   }
 }
 
-.container--footer {
+.container--contacts {
+  @media screen and (min-width: 320px) {
+    padding: 0 50px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 36px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0 115px;
+  }
+}
+
+.section__title--visually-hidden {
+  @extend %visually-hidden;
+}
+
+.contacts {
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: space-between;
-
-    padding-bottom: 91px;
+    margin: -10px;
   }
   @media screen and (min-width: 1280px) {
-    padding-bottom: 97px;
+    margin: -15px;
   }
 }
 
-.section__label--footer {
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 340px;
-    text-align: left;
+.contacts__item {
+  padding: 43px 20px;
+
+  background: $main-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 6 * 10px) / 3);
+    margin: 10px;
+    padding: 50px 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+    padding: 60px 43px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+    }
   }
 }
 
-.section__title--footer {
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 340px;
-    text-align: left;
-  }
-}
-
-.footer {
-  @media screen and (max-width: 767px) {
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-}
-
-.footer__social {
+.contacts__cafe {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
 
-  margin-bottom: 46px;
-}
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  text-transform: uppercase;
+  color: $main-color;
+  background-color: $product-card-2-color;
+  border-radius: 4px;
 
-.footer__item:not(:last-child) {
-  margin-right: 29px;
-}
+  @media screen and (min-width: 768px) {
+    width: 73px;
 
-.footer__icon {
-  fill: $social-bg-color;
-  transform: scale(1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  .footer__link:hover &,
-  .footer__link:focus & {
-    fill: $accent-color;
-    transform: scale(1.1);
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 25px;
+    font-size: 12px;
   }
 }
 
-.footer__contact-text {
-  font-weight: bold;
+.contacts__cafe--food-truck {
+  min-width: 130px;
+  background-color: $product-card-3-color;
+
+  @media screen and (min-width: 768px) {
+    min-width: 138px;
+  }
+}
+
+.contacts__city {
+  font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
-  text-align: right;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: $main-text-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 12px;
+  }
+}
+
+.contacts__text {
+  padding-bottom: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $alternate-text-color;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
-.footer__contact-phone {
-  display: inline;
-
-  color: $section-title-color;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    color: $section-label-color;
-  }
-}
-
-.copyright {
-  padding-top: 22px;
-
+.schedule {
+  width: 173px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 
   @media screen and (min-width: 768px) {
-    padding-top: 29px;
+    width: 157px;
+    padding-bottom: 30px;
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 9px;
+    width: 234px;
+    padding-bottom: 32px;
   }
 }
 
-.copyright__text {
-  font-weight: bold;
+.schedule__item {
+  font-weight: 500;
   font-size: 14px;
-  line-height: 1.52;
-  text-align: center;
-  color: $alternate-text-color;
+  line-height: 1.86;
+}
 
+.schedule__item—day {
+  color: $main-text-color;
+}
+
+.schedule__item—time {
+  color: $section-label-color;
+}
+
+.contact {
+  margin-top: 25px;
+}
+
+.contact__phone,
+.contact__mail {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: $alternate-text-color;
+}
+
+.contacts-btn {
+  margin-top: 54px;
+  text-align: center;
+}
+
+.contacts-btn__location {
+  min-width: 162px;
+  padding: 13px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $main-color;
+  background: $accent-color;
+  border-radius: 22px;
+  border: none;
+  text-transform: capitalize;
+}
+
+.contacts-btn__franchise {
+  min-width: 162px;
+  padding: 13px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: $accent-color;
+  background: $main-color;
+  border: none;
+  border-radius: 22px;
+  text-transform: capitalize;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
   @media screen and (min-width: 768px) {
-    line-height: 1.86;
+    margin-left: 15px;
+  }
+}
+
+.contacts__icon {
+  @media screen and (max-width: 767px) {
+    margin-left: 14px;
+  }
+}
+
+// карта
+
+.location__button {
+  min-width: 162px;
+  padding: 13px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: $accent-color;
+  background: $main-color;
+  border: none;
+  border-radius: 22px;
+  text-transform: capitalize;
+  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 15px;
+  }
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $accent-color;
+  }
+}
+.modal {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 100%;
+
+  background: white;
+  box-shadow: 0px 1px 3px rgba(196, 98, 199, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .backdrop--hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1000px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.google-map {
+  @media screen and (min-width: 320px) {
+    width: 100%;
+    height: 95%;
+  }
+  @media screen and (min-width: 480px) {
+    top: 25%;
+    left: 50%;
+  }
+  @media screen and (min-width: 480px) {
+    top: 25%;
+    left: 50%;
+    height: 90%;
+  }
+}
+.location__address {
+  padding-bottom: 10px;
+  background: linear-gradient(transparent, $second-color);
+  border-radius: 22px;
+}
+.section__label--address {
+  margin-bottom: 0;
+}
+.address__description {
+  color: black;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
   }
 }

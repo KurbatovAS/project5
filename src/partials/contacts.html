@@ -1,6 +1,6 @@
 <!-- контакты -->
 
-<section class="section section--contacts">
+<section class="section section--contacts" id="сontacts">
   <div class="container container--contacts">
     <h2 class="section__title section__title--visually-hidden">Contacts</h2>
 
@@ -11,16 +11,16 @@
         <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
         <ul class="schedule">
-          <li class="schedule__item schedule__item—day">Monday - Friday</li>
+          <li class="schedule__item">Monday - Friday</li>
           <li class="schedule__item schedule__item—time">06:00 AM - 10:00 PM</li>
 
-          <li class="schedule__item schedule__item—day">Saturday - Sunday</li>
+          <li class="schedule__item">Saturday - Sunday</li>
           <li class="schedule__item schedule__item—time">08:00 AM - 16:00 PM</li>
         </ul>
 
         <ul class="contact">
           <li class="contact__item">
-            <a class="contact__phone" href="tel:+61(0)383766284 ">+61(0) 383 766 284 </a>
+            <a class="contact__phone" href="tel:+610383766284 ">+61(0) 383 766 284 </a>
           </li>
           <li class="contact__item">
             <a class="contact__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
@@ -77,36 +77,42 @@
 
     <!-- кнопки -->
 
-    <div class="contacts-btn">
-      <button type="button" class="location__button" data-open-modal>
-        our locations
-        <svg class="contacts-btn__icon" width="5" height="8">
-          <use href="#"></use>
-        </svg>
-      </button>
-      <div class="backdrop backdrop--hidden" data-backdrop data-close-modal>
-        <div class="modal">
-          <address class="location__address">
-            <p class="section__label section__label--address">Our address</p>
-            <p class="address__description">Yevhen Konovalets Street, 36, Kyiv, 02000</p>
-          </address>
-          <iframe
-            class="google-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8661565083253!2d30.531895015426947!3d50.42496529708237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d96f5139689b%3A0xa1f7c65300bebad1!2sGoIT!5e0!3m2!1sru!2sua!4v1631549983697!5m2!1sru!2sua"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-      <button type="button" class="contacts-btn__franchise">
-        franchise
-        <svg class="contacts-btn__icon contacts-btn__icon--franchise" width="5" height="8">
-          <use href="#"></use>
-        </svg>
-      </button>
-    </div>
+    <ul class="contacts-btn">
+      <li class="contacts-item">
+        <button type="button" class="contacts-btn__location" data-open-map>
+          our locations
+          <svg class="contacts-btn__icon" width="5" height="8">
+            <use href="#"></use>
+          </svg>
+        </button>
+      </li>
 
-    <!-- </div> -->
+      <li class="contacts-item">
+        <button type="button" class="contacts-btn__franchise">
+          franchise
+          <svg class="contacts-btn__icon contacts-btn__icon--franchise" width="5" height="8">
+            <use href="#"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <div class="backdrop backdrop--hidden" data-backdrop data-close-map>
+      <div class="modal-map">
+        <address class="location__address">
+          <p class="section__label section__label--address">Our address</p>
+          <p class="section__label section__label--description">
+            Yevhen Konovalets Street, 36, Kyiv, 02000
+          </p>
+        </address>
+        <iframe
+          class="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8661565083253!2d30.531895015426947!3d50.42496529708237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d96f5139689b%3A0xa1f7c65300bebad1!2sGoIT!5e0!3m2!1sru!2sua!4v1631549983697!5m2!1sru!2sua"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
   </div>
 </section>
