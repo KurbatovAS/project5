@@ -1,17 +1,23 @@
-.section--contacts {
-  background-color: $second-color;
+body {
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .section--contacts {
-  padding-top: 86px;
+  background: linear-gradient(to top, $second-color 80%, #fff 20%);
+}
+
+.section--contacts {
+  padding-top: 0;
   padding-bottom: 65px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 110px;
+    padding-top: 0;
     padding-bottom: 100px;
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 130px;
+    padding-top: 0;
     padding-bottom: 100px;
   }
 }
@@ -75,9 +81,9 @@
   justify-content: center;
   width: 80px;
 
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.86;
   text-transform: uppercase;
   color: $main-color;
@@ -86,12 +92,11 @@
 
   @media screen and (min-width: 768px) {
     width: 73px;
-
-    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 16px;
   }
   @media screen and (min-width: 1280px) {
-    margin-bottom: 25px;
-    font-size: 12px;
+    margin-bottom: 32px;
   }
 }
 
@@ -123,44 +128,59 @@
 }
 
 .contacts__text {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   font-weight: 500;
+  font-size: 12px;
   line-height: 1.5;
   color: $alternate-text-color;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
     font-size: 14px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 12px;
+    margin-bottom: 32px;
+    font-size: 16px;
   }
 }
 
 .schedule {
-  width: 173px;
   padding-top: 25px;
   padding-bottom: 25px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
 
   @media screen and (min-width: 768px) {
-    width: 157px;
+    padding-top: 32px;
     padding-bottom: 30px;
   }
   @media screen and (min-width: 1280px) {
-    width: 234px;
+    padding-top: 32px;
     padding-bottom: 32px;
   }
 }
 
 .schedule__item {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.86;
-}
 
-.schedule__item—day {
   color: $main-text-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .schedule__item—time {
@@ -169,57 +189,190 @@
 
 .contact {
   margin-top: 25px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 32px;
+  }
 }
 
 .contact__phone,
 .contact__mail {
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.86;
+  line-height: 1.5;
   color: $alternate-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.83;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
 }
 
 .contacts-btn {
   margin-top: 54px;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 81px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 86px;
+  }
+}
+
+.contacts-item {
+  display: inline-block;
+
+  &:not(:last-of-type) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 15px;
+    }
+  }
+}
+
+%contacts-btn__common {
+  min-width: 162px;
+  padding: 13px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 22px;
+  border: none;
+  text-transform: capitalize;
+  transform: scale(1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-btn__location {
-  min-width: 162px;
-  padding: 13px 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.3;
+  @extend %contacts-btn__common;
   color: $main-color;
   background: $accent-color;
-  border-radius: 22px;
-  border: none;
-  text-transform: capitalize;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    background-color: $main-color;
+    transform: scale(1.1);
+  }
 }
 
 .contacts-btn__franchise {
-  min-width: 162px;
-  padding: 13px 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.3;
-
+  @extend %contacts-btn__common;
   color: $accent-color;
   background: $main-color;
-  border: none;
-  border-radius: 22px;
-  text-transform: capitalize;
 
-  @media screen and (max-width: 767px) {
-    margin-top: 10px;
-  }
-  @media screen and (min-width: 768px) {
-    margin-left: 15px;
+  &:hover,
+  &:focus {
+    color: $main-color;
+    background-color: $accent-color;
+    transform: scale(1.1);
   }
 }
 
 .contacts__icon {
   @media screen and (max-width: 767px) {
     margin-left: 14px;
+  }
+}
+
+// карта
+
+.modal-map {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 100%;
+  height: 500px;
+  background: white;
+  box-shadow: 0px 1px 3px rgba(196, 98, 199, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .backdrop--hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1000px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.google-map {
+  @media screen and (min-width: 320px) {
+    width: 100%;
+    height: 95%;
+  }
+  @media screen and (min-width: 480px) {
+    top: 25%;
+    left: 50%;
+  }
+  @media screen and (min-width: 480px) {
+    top: 25%;
+    left: 50%;
+    height: 90%;
+  }
+}
+.location__address {
+  padding-bottom: 10px;
+  background: linear-gradient(transparent, $second-color);
+  border-radius: 22px;
+}
+.section__label--address {
+  margin-bottom: 0;
+}
+.section__label--description {
+  margin-bottom: 5px;
+  color: black;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
   }
 }

@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
     <title>Заголовок страницы</title>
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +19,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body lock>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <include src="./partials/hero-header.html"></include>
     <include src="./partials/products.html"></include>
@@ -35,33 +36,33 @@
 
     <script src="./index.js"></script>
 
-    <script defer src="./java-script/mobile-menu.js"></script>
-    <script defer src="./java-script/mobile-modal.js"></script>
-    <script defer src="./java-script/scroll.js"></script>
-  <script src="./java-script/readmore-active.js"></script>
-    <script src="./java-script/readmore-1.js"></script>
-    <script src="./java-script/readmore-2.js"></script>
-    <script src="./java-script/readmore-3.js"></script>
-    <script src="./java-script/modal.js"></script>
-    <script src="./java-script/slide.js"></script>
+    <script defer src="./java-script/mobile-menu.js" type="module"></script>
+    <script defer src="./java-script/mobile-modal.js" type="module"></script>
+    <script defer src="./java-script/scroll.js" type="module"></script>
+    <script src="./java-script/readmore-active.js" type="module"></script>
+    <script src="./java-script/readmore-1.js" type="module"></script>
+    <script src="./java-script/readmore-2.js" type="module"></script>
+    <script src="./java-script/readmore-3.js" type="module"></script>
+    <script src="./java-script/modal.js" type="module"></script>
+    <script src="./java-script/slide.js" type="module"></script>
+    <script src="./java-script/modal-map.js" type="module"></script>
 
-    <script>
-     function myFunction() {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("aboutBtn");
+    <script type="module">
+      function myFunction() {
+        var dots = document.getElementById('dots');
+        var moreText = document.getElementById('more');
+        var btnText = document.getElementById('aboutBtn');
 
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more";
-          moreText.style.display = "none";
+        if (dots.style.display === 'none') {
+          dots.style.display = 'inline';
+          btnText.innerHTML = 'Read more';
+          moreText.style.display = 'none';
         } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less";
-          moreText.style.display = "inline";
+          dots.style.display = 'none';
+          btnText.innerHTML = 'Read less';
+          moreText.style.display = 'inline';
         }
       }
-
     </script>
   </body>
 </html>
