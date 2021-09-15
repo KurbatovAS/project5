@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body lock>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <include src="./partials/hero-header.html"></include>
     <include src="./partials/products.html"></include>
@@ -32,8 +32,7 @@
     <!-- <include src="./partials/example.html"></include> -->
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-
-    <script src="./index.js"></script>
+    <script defer src="./index.js"></script>
 
     <script defer src="./java-script/mobile-menu.js"></script>
     <script defer src="./java-script/mobile-modal.js"></script>
@@ -45,5 +44,6 @@
     <script src="./java-script/modal.js"></script>
     <script src="./java-script/slide.js"></script>
     <script src="./java-script/readmore-about.js"></script>
+    <script src="./java-script/map.js"></script>
   </body>
 </html>
