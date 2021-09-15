@@ -117,13 +117,15 @@
 }
 
 .hero {
-  margin-top: 137px;
+  padding-top: 137px;
+  padding-bottom: 160px;
 
   @media screen and(min-width:768px) {
-    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 0;
   }
   @media screen and(min-width:1280px) {
-    margin-top: 81px;
+    padding-top: 81px;
   }
 }
 
@@ -201,7 +203,6 @@
 .hero__btn--lighten {
   background-color: $main-color;
   color: $accent-color;
-  margin-bottom: 160px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
