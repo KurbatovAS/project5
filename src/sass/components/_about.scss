@@ -11,6 +11,7 @@
   background: $second-color;
   background-repeat: no-repeat;
   z-index: 2;
+  padding-bottom: 0;
 }
 .section-bg {
   display: none;
@@ -20,7 +21,7 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    bottom: 10%;
+    bottom: 6%;
     height: 150px;
   }
   @media screen and(min-width:768px) {
@@ -30,7 +31,9 @@
     display: flex;
     justify-content: space-between;
     z-index: -1;
-    height: 500px;
+
+    bottom: -9%;
+    height: 530px;
   }
 }
 .about {
@@ -123,15 +126,14 @@
     padding: 0;
     font-size: 14px;
     line-height: 1.8;
-    padding-top: 50px;
-    margin-top: 0;
+    padding-top: 0;
   }
   @media screen and(min-width:1280px) {
     width: 463px;
     padding: 0;
     font-size: 16px;
     line-height: 1.8;
-    padding-top: 5px;
+    margin-top: 0px;
   }
 }
 
@@ -143,6 +145,7 @@
     margin-bottom: 15px;
   }
   @media screen and(min-width:768px) {
+    letter-spacing: 0.04em;
     &:last-of-type {
       margin-bottom: 60px;
     }
@@ -150,6 +153,7 @@
   @media screen and(min-width:1280px) {
     font-size: 14px;
     line-height: 1.9;
+    letter-spacing: 0.04em;
     &:last-of-type {
       margin-bottom: 55px;
     }
@@ -159,6 +163,12 @@
 .description__text--color {
   color: $main-text-color;
   margin-bottom: 35px;
+
+  @media screen and(min-width:1280px) {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+  }
 }
 .description__button {
   min-width: 175px;
