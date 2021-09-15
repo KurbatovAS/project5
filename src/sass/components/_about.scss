@@ -10,7 +10,7 @@
   position: relative;
   background: $second-color;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: -1;
 }
 .section-bg {
   display: none;
@@ -29,7 +29,7 @@
   @media screen and(min-width:1280px) {
     display: flex;
     justify-content: space-between;
-    z-index: -1;
+    z-index: 0;
     height: 500px;
   }
 }
